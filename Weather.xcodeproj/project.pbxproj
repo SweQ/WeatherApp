@@ -23,8 +23,8 @@
 		7266879526D3971D00E68405 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266879426D3971D00E68405 /* CurrentWeather.swift */; };
 		7266879826D3973F00E68405 /* WeatherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266879726D3973F00E68405 /* WeatherType.swift */; };
 		7273FD1026D3A2CF00A7B32D /* OpenWeatherMapLinksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273FD0F26D3A2CF00A7B32D /* OpenWeatherMapLinksManager.swift */; };
-		7273FD1926D3C01A00A7B32D /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = 7273FD1826D3C01A00A7B32D /* city.list.json */; };
 		7273FD1C26D3C26700A7B32D /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273FD1B26D3C26700A7B32D /* LocalFileManager.swift */; };
+		728EE4EB2719F99B00E56C71 /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = 728EE4EA2719F99A00E56C71 /* city.list.json */; };
 		729A1DF726DC063100F81B59 /* MainViewController+ UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A1DF626DC063100F81B59 /* MainViewController+ UICollectionViewExtensions.swift */; };
 		72AA22C426D6664400BFDFE2 /* SelectCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA22C326D6664400BFDFE2 /* SelectCityView.swift */; };
 		72AA22C726D6665100BFDFE2 /* SelectCityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AA22C626D6665100BFDFE2 /* SelectCityView.xib */; };
@@ -62,8 +62,8 @@
 		7266879426D3971D00E68405 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		7266879726D3973F00E68405 /* WeatherType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherType.swift; sourceTree = "<group>"; };
 		7273FD0F26D3A2CF00A7B32D /* OpenWeatherMapLinksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapLinksManager.swift; sourceTree = "<group>"; };
-		7273FD1826D3C01A00A7B32D /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = city.list.json; path = ../../../../Desktop/TMS_Lessons/MVVMPractic1/MVVMPractic1/city.list.json; sourceTree = "<group>"; };
 		7273FD1B26D3C26700A7B32D /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		728EE4EA2719F99A00E56C71 /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = city.list.json; path = ../../../../../Downloads/city.list.json; sourceTree = "<group>"; };
 		729A1DF626DC063100F81B59 /* MainViewController+ UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ UICollectionViewExtensions.swift"; sourceTree = "<group>"; };
 		72AA22C326D6664400BFDFE2 /* SelectCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityView.swift; sourceTree = "<group>"; };
 		72AA22C626D6665100BFDFE2 /* SelectCityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCityView.xib; sourceTree = "<group>"; };
@@ -231,8 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				72F7B38426D3712800BD6168 /* AppDelegate.swift */,
-				7273FD1826D3C01A00A7B32D /* city.list.json */,
 				72F7B38626D3712800BD6168 /* SceneDelegate.swift */,
+				728EE4EA2719F99A00E56C71 /* city.list.json */,
 				72DCDD9026D647A0001E17F7 /* UIView+fixInContainer.swift */,
 			);
 			path = Resources;
@@ -347,10 +347,10 @@
 				72DCDD8E26D6414D001E17F7 /* DetailsWeatherView.xib in Resources */,
 				72C05D3B26D5771100C144ED /* CurrentWeatherView.xib in Resources */,
 				72F7B39126D3712B00BD6168 /* LaunchScreen.storyboard in Resources */,
-				7273FD1926D3C01A00A7B32D /* city.list.json in Resources */,
 				72F7B38E26D3712B00BD6168 /* Assets.xcassets in Resources */,
 				72DA9A6A26DCEEBF00ECC96A /* DailyWeatherTableViewCell.xib in Resources */,
 				7266878026D374E000E68405 /* MainView.storyboard in Resources */,
+				728EE4EB2719F99B00E56C71 /* city.list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
