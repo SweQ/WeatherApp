@@ -39,6 +39,13 @@ class CurrentWeatherView: UIView {
         windInfoView.imageView.image = UIImage(named: "wind_png")
         humidityInfoView.imageView.image = UIImage(named: "humidity_png")
         pressureInfoView.imageView.image = UIImage(named: "barometer_png")
+        setupFonts()
+    }
+    
+    private func setupFonts() {
+        descriptionLabel.setAppStyle()
+        feelsLikeLabel.setAppStyle()
+        temperatureLabel.setAppStyle()
     }
     
 }

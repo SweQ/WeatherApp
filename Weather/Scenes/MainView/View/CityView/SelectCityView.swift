@@ -27,6 +27,10 @@ class SelectCityView: UIView {
         Bundle.init(for: SelectCityView.self).loadNibNamed(String(describing: SelectCityView.self), owner: self, options: nil)
         contentView.fixInContainer(self)
         cityNameTextField.isHidden = true
+        setupFonts()
     }
     
+    private func setupFonts() {
+        cityNameLabel.setAppStyle()
+    }
 }

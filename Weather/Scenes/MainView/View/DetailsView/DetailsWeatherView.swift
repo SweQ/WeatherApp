@@ -27,6 +27,11 @@ class DetailsWeatherView: UIView {
         Bundle.init(for: DetailsWeatherView.self).loadNibNamed(String(describing: DetailsWeatherView.self), owner: self, options: nil)
         //self.layer.masksToBounds = true
         contentView.fixInContainer(self)
+        setupFonts()
+    }
+    
+    private func setupFonts() {
+        descriptionLabel.setAppStyle()
     }
 
 }

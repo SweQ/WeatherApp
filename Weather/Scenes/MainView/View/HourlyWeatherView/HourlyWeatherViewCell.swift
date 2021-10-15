@@ -21,6 +21,12 @@ class HourlyWeatherViewCell: UICollectionViewCell {
         containerView.layer.shadowRadius = 2
         containerView.layer.shadowColor = UIColor.black.cgColor
         containerView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        setupFonts()
+    }
+    
+    private func setupFonts() {
+        temperatureLabel.setAppStyle()
+        timeLabel.setAppStyle()
     }
 
 }
