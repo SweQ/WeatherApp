@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -134,6 +135,7 @@
                     <connections>
                         <outlet property="currentWeatherView" destination="W1X-bx-Avw" id="ROD-WB-TfB"/>
                         <outlet property="dailyWeatherTableView" destination="0AJ-uH-rN2" id="Ame-bt-DrK"/>
+                        <outlet property="displayScrollView" destination="0b7-eO-2Rb" id="M9D-b9-Hu7"/>
                         <outlet property="heightConstraint" destination="oyI-4E-qTM" id="Mic-fj-ps3"/>
                         <outlet property="hourlyWeatherCollectionView" destination="gsa-kb-Hdr" id="IPv-7X-PW8"/>
                         <outlet property="selectCityTableView" destination="X59-yG-1ke" id="wzp-Hn-dhJ"/>

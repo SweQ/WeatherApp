@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -112,9 +113,13 @@
             <connections>
                 <outlet property="containerView" destination="H2p-sc-9uM" id="QCc-CD-MMx"/>
                 <outlet property="dateLabel" destination="FB5-Ee-nND" id="FZP-XL-OUr"/>
+                <outlet property="dayLabel" destination="LiZ-Jq-fBv" id="Vue-nx-Zbr"/>
                 <outlet property="dayTempLabel" destination="Uok-rr-C6O" id="Vkj-Bw-UQ9"/>
+                <outlet property="eveLabel" destination="xLW-YB-Ki5" id="BBw-13-9OH"/>
                 <outlet property="eveTempLabel" destination="Scw-iM-W43" id="4sE-qZ-gBe"/>
+                <outlet property="morningLabel" destination="xcx-ca-1Kt" id="gfv-o6-KVi"/>
                 <outlet property="morningTempLabel" destination="fJT-Bp-S2z" id="9ia-zx-22b"/>
+                <outlet property="nightLabel" destination="YtU-qv-e5x" id="5td-qg-KGX"/>
                 <outlet property="nightTempLabel" destination="HV8-ip-Y0D" id="phT-BL-Bi8"/>
                 <outlet property="weatherImageView" destination="g7O-4G-cp8" id="eqU-5t-hty"/>
             </connections>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,16 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="331" height="304"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-00-Rbu">
-                                <rect key="frame" x="5" y="5" width="321" height="34"/>
+                                <rect key="frame" x="5" y="5" width="321" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMB-tA-VnB">
-                                <rect key="frame" x="5" y="49" width="321" height="152"/>
+                                <rect key="frame" x="5" y="58.5" width="321" height="152"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2S-Fh-3us">
-                                <rect key="frame" x="5" y="206" width="321" height="93"/>
+                                <rect key="frame" x="5" y="215.5" width="321" height="83.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,7 +41,7 @@
                             <constraint firstItem="bMB-tA-VnB" firstAttribute="leading" secondItem="mAD-Tj-3Q0" secondAttribute="leading" constant="5" id="5fh-vS-6Ec"/>
                             <constraint firstAttribute="trailing" secondItem="bMB-tA-VnB" secondAttribute="trailing" constant="5" id="9Yx-vp-dqD"/>
                             <constraint firstItem="J2S-Fh-3us" firstAttribute="top" secondItem="bMB-tA-VnB" secondAttribute="bottom" constant="5" id="H7G-Rn-K31"/>
-                            <constraint firstItem="Fga-00-Rbu" firstAttribute="height" secondItem="mAD-Tj-3Q0" secondAttribute="height" multiplier="1:9" id="IjI-mb-Cmi"/>
+                            <constraint firstItem="Fga-00-Rbu" firstAttribute="height" secondItem="mAD-Tj-3Q0" secondAttribute="height" multiplier="1:7" id="IjI-mb-Cmi"/>
                             <constraint firstItem="Fga-00-Rbu" firstAttribute="top" secondItem="mAD-Tj-3Q0" secondAttribute="top" constant="5" id="KGO-Qw-aVo"/>
                             <constraint firstAttribute="trailing" secondItem="J2S-Fh-3us" secondAttribute="trailing" constant="5" id="Ygq-MP-Cbp"/>
                             <constraint firstItem="Fga-00-Rbu" firstAttribute="leading" secondItem="mAD-Tj-3Q0" secondAttribute="leading" constant="5" id="b9i-Gw-bgQ"/>

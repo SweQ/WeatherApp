@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
     
     internal var modelView = MainViewModel()
     
+    @IBOutlet weak var displayScrollView: UIScrollView!
     @IBOutlet weak var selectCityTableView: UITableView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var currentWeatherView: CurrentWeatherView!
@@ -27,7 +28,7 @@ class MainViewController: UIViewController {
         createTableView()
         createSelectCityTapGesture()
         createSelectCityTextField()
-        
+        setupScrollView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,6 +36,10 @@ class MainViewController: UIViewController {
         let window = UIApplication.shared.windows.first
         let topPadding = window?.safeAreaInsets.top ?? 0
         heightConstraint.constant = self.view.frame.height - self.selectCityView.frame.height - topPadding
+    }
+    
+    private func setupScrollView() {
+        displayScrollView.showsVerticalScrollIndicator = false
     }
     
     private func createSelectCityTextField() {

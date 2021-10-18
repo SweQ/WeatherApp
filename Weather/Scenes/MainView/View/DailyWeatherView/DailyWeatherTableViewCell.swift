@@ -16,18 +16,19 @@ class DailyWeatherTableViewCell: UITableViewCell {
     @IBOutlet weak var dayTempLabel: UILabel!
     @IBOutlet weak var eveTempLabel: UILabel!
     @IBOutlet weak var nightTempLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var morningLabel: UILabel!
+    @IBOutlet weak var nightLabel: UILabel!
+    @IBOutlet weak var eveLabel: UILabel!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         setupFonts()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     private func setupFonts() {
@@ -35,6 +36,12 @@ class DailyWeatherTableViewCell: UITableViewCell {
         eveTempLabel.setAppStyle()
         nightTempLabel.setAppStyle()
         morningTempLabel.setAppStyle()
+        dateLabel.setAppStyle()
+        morningLabel.setAppStyle()
+        dayLabel.setAppStyle()
+        eveLabel.setAppStyle()
+        nightLabel.setAppStyle()
+        
     }
     
 }

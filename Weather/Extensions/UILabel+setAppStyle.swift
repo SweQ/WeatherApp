@@ -12,5 +12,10 @@ extension UILabel {
         self.font = UIFont(name: "JafelineHand", size: 23)
         self.adjustsFontSizeToFitWidth = true
         self.minimumScaleFactor = 2 / self.font.pointSize
+        self.layer.shadowColor = UIColor.gray.cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowOffset = CGSize(width: 2, height: 1)
+        self.layer.shadowRadius = 2
+        
     }
 }

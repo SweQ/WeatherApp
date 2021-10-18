@@ -32,10 +32,6 @@ class CurrentWeatherView: UIView {
     private func setup() {
         Bundle.init(for: CurrentWeatherView.self).loadNibNamed(String(describing: CurrentWeatherView.self), owner: self, options: nil)
         containerView.fixInContainer(self)
-        containerView.layer.shadowOpacity = 1
-        containerView.layer.shadowRadius = 1
-        containerView.layer.shadowColor = UIColor.gray.cgColor
-        containerView.layer.shadowOffset = CGSize(width: 1, height: 1)
         windInfoView.imageView.image = UIImage(named: "wind_png")
         humidityInfoView.imageView.image = UIImage(named: "humidity_png")
         pressureInfoView.imageView.image = UIImage(named: "barometer_png")
