@@ -29,6 +29,7 @@ class MainViewController: UIViewController {
         createSelectCityTapGesture()
         createSelectCityTextField()
         setupScrollView()
+        setupCurrentCityView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,6 +41,15 @@ class MainViewController: UIViewController {
     
     private func setupScrollView() {
         displayScrollView.showsVerticalScrollIndicator = false
+    }
+    
+    private func setupCurrentCityView() {
+        selectCityView.currentLocationButton.addTarget(self, action: #selector(currentLocationButtonPressed(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func currentLocationButtonPressed(sender: UIButton) {
+        modelView.updateCurrentCityWithCurrentLocation()
+        cleareSelectCityView()
     }
     
     private func createSelectCityTextField() {
@@ -65,6 +75,7 @@ class MainViewController: UIViewController {
         modelView.cityFilter = ""
         selectCityTableView.reloadData()
         selectCityView.cityNameTextField.isHidden = true
+        selectCityView.currentLocationButton.isHidden = true
         selectCityView.cityNameTextField.resignFirstResponder()
     }
     
@@ -76,6 +87,7 @@ class MainViewController: UIViewController {
     @objc func tapGestureHandler(sender: UITapGestureRecognizer) {
         selectCityTableView.isHidden = false
         selectCityView.cityNameTextField.isHidden = false
+        selectCityView.currentLocationButton.isHidden = false
         selectCityView.cityNameTextField.becomeFirstResponder()
     }
     

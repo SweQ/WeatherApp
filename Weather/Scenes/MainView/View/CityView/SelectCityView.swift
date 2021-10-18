@@ -11,7 +11,9 @@ class SelectCityView: UIView {
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var currentLocationButton: UIButton!
     @IBOutlet weak var cityNameTextField: UITextField!
+    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -27,6 +29,7 @@ class SelectCityView: UIView {
         Bundle.init(for: SelectCityView.self).loadNibNamed(String(describing: SelectCityView.self), owner: self, options: nil)
         contentView.fixInContainer(self)
         cityNameTextField.isHidden = true
+        currentLocationButton.isHidden = true
         setupFonts()
     }
     
