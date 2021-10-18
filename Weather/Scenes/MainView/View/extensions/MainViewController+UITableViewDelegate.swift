@@ -51,7 +51,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView.tag == 1 {
-            return self.selectCityTableView.frame.height / 5
+            let standartHeight = selectCityView.frame.height
+            let countOfElements = modelView.citiesWithFilter.count
+            
+            if countOfElements > 5 {
+                tableView.frame.size.height = standartHeight * 5
+                return self.selectCityTableView.frame.height / 5
+            } else if countOfElements == 0{
+                tableView.frame.size.height = .zero
+                return 0
+            } else {
+                tableView.frame.size.height = standartHeight * CGFloat(countOfElements)
+                return self.selectCityTableView.frame.height / CGFloat(countOfElements)
+            }
         }
         return self.view.frame.height / 4
     }

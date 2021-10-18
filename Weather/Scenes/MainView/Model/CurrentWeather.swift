@@ -29,10 +29,10 @@ struct CurrentWeather: Codable {
     private let temp: Double
     private let feels_like: Double
     var temperature: String {
-        return "\(temp) ºС"
+        return "\(temp) C"
     }
     var temperatureFeels: String {
-        return "\(feels_like) ºС"
+        return "\(feels_like) C"
     }
     private let pressure: Double
     var pressureInfo: String {

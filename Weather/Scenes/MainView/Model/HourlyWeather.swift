@@ -38,11 +38,11 @@ struct HourlyWeather: Codable {
     
     private let temp: Double
     var temperature: String {
-        return "\(temp) ºС"
+        return "\(temp) C"
     }
     private let feels_like: Double
     var temperatureFeels: String {
-        return "\(feels_like) ºС"
+        return "\(feels_like) C"
     }
     let weather: [WeatherType]
 }

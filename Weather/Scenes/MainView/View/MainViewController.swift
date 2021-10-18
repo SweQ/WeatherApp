@@ -41,6 +41,7 @@ class MainViewController: UIViewController {
     
     private func setupScrollView() {
         displayScrollView.showsVerticalScrollIndicator = false
+        displayScrollView.bounces = false
     }
     
     private func setupCurrentCityView() {
@@ -107,6 +108,7 @@ class MainViewController: UIViewController {
         
         dailyWeatherTableView.delegate = self
         dailyWeatherTableView.dataSource = self
+        dailyWeatherTableView.bounces = false
         let nib = UINib(nibName: "DailyWeatherTableViewCell", bundle: nil)
         dailyWeatherTableView.register(nib, forCellReuseIdentifier: "DailyWeatherTableViewCell")
         selectCityTableView.isHidden = true

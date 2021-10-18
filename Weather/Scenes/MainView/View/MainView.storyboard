@@ -108,10 +108,10 @@
                                 </constraints>
                             </scrollView>
                             <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X59-yG-1ke">
-                                <rect key="frame" x="5" y="144" width="404" height="200"/>
+                                <rect key="frame" x="5" y="144" width="404" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="6uY-o0-ldq"/>
+                                    <constraint firstAttribute="height" constant="1" id="6uY-o0-ldq"/>
                                 </constraints>
                             </tableView>
                         </subviews>

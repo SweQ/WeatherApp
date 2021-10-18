@@ -15,15 +15,15 @@ struct DailyTemperature: Codable {
     private let eve: Double
     private let morn: Double
     var temperatureDay: String {
-        return "\(day) ºС"
+        return "\(day) C"
     }
     var temperatureMorning: String {
-        return "\(morn) ºС"
+        return "\(morn) C"
     }
     var temperatureEve: String {
-        return "\(eve) ºС"
+        return "\(eve) C"
     }
     var temperatureNight: String {
-        return "\(night) ºС"
+        return "\(night) C"
     }
 }
