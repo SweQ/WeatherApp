@@ -122,6 +122,15 @@
                 <outlet property="nightLabel" destination="YtU-qv-e5x" id="5td-qg-KGX"/>
                 <outlet property="nightTempLabel" destination="HV8-ip-Y0D" id="phT-BL-Bi8"/>
                 <outlet property="weatherImageView" destination="g7O-4G-cp8" id="eqU-5t-hty"/>
+                <outletCollection property="viewLabels" destination="FB5-Ee-nND" collectionClass="NSMutableArray" id="jps-qf-y6B"/>
+                <outletCollection property="viewLabels" destination="xcx-ca-1Kt" collectionClass="NSMutableArray" id="gDa-yW-TpF"/>
+                <outletCollection property="viewLabels" destination="LiZ-Jq-fBv" collectionClass="NSMutableArray" id="8q5-WC-pae"/>
+                <outletCollection property="viewLabels" destination="xLW-YB-Ki5" collectionClass="NSMutableArray" id="qCI-mZ-geZ"/>
+                <outletCollection property="viewLabels" destination="YtU-qv-e5x" collectionClass="NSMutableArray" id="lbw-5A-Tc6"/>
+                <outletCollection property="viewLabels" destination="fJT-Bp-S2z" collectionClass="NSMutableArray" id="098-fA-ITy"/>
+                <outletCollection property="viewLabels" destination="Uok-rr-C6O" collectionClass="NSMutableArray" id="sPs-CZ-aSW"/>
+                <outletCollection property="viewLabels" destination="Scw-iM-W43" collectionClass="NSMutableArray" id="Gdn-7C-3Gb"/>
+                <outletCollection property="viewLabels" destination="HV8-ip-Y0D" collectionClass="NSMutableArray" id="YX4-i2-YRb"/>
             </connections>
             <point key="canvasLocation" x="335.50724637681162" y="144.64285714285714"/>
         </tableViewCell>

@@ -19,6 +19,9 @@ class CurrentWeatherView: UIView {
     @IBOutlet weak var humidityInfoView: DetailsWeatherView!
     @IBOutlet weak var pressureInfoView: DetailsWeatherView!
     
+    @IBOutlet var viewLabels: [UILabel]!
+    
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
@@ -32,16 +35,16 @@ class CurrentWeatherView: UIView {
     private func setup() {
         Bundle.init(for: CurrentWeatherView.self).loadNibNamed(String(describing: CurrentWeatherView.self), owner: self, options: nil)
         containerView.fixInContainer(self)
-        windInfoView.imageView.image = UIImage(named: "wind_png")
-        humidityInfoView.imageView.image = UIImage(named: "humidity_png")
-        pressureInfoView.imageView.image = UIImage(named: "barometer_png")
+        windInfoView.imageView.image = UIImage(picture: .wind_png)
+        humidityInfoView.imageView.image = UIImage(picture: .humidity_png)
+        pressureInfoView.imageView.image = UIImage(picture: .barometer_png)
         setupFonts()
     }
     
     private func setupFonts() {
-        descriptionLabel.setAppStyle()
-        feelsLikeLabel.setAppStyle()
-        temperatureLabel.setAppStyle()
+        for label in viewLabels {
+            label.setAppStyle()
+        }
     }
     
 }

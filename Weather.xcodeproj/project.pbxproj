@@ -22,6 +22,8 @@
 		7266879226D3803400E68405 /* OpenWeatherMapOneCallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266879126D3803400E68405 /* OpenWeatherMapOneCallAPI.swift */; };
 		7266879526D3971D00E68405 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266879426D3971D00E68405 /* CurrentWeather.swift */; };
 		7266879826D3973F00E68405 /* WeatherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266879726D3973F00E68405 /* WeatherType.swift */; };
+		726F24E5271D96EB0061478C /* Pictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726F24E4271D96EB0061478C /* Pictures.swift */; };
+		726F24E7271D978C0061478C /* UIImage + initWithPictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726F24E6271D978C0061478C /* UIImage + initWithPictures.swift */; };
 		7273FD1026D3A2CF00A7B32D /* OpenWeatherMapLinksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273FD0F26D3A2CF00A7B32D /* OpenWeatherMapLinksManager.swift */; };
 		7273FD1C26D3C26700A7B32D /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273FD1B26D3C26700A7B32D /* LocalFileManager.swift */; };
 		728EE4EB2719F99B00E56C71 /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = 728EE4EA2719F99A00E56C71 /* city.list.json */; };
@@ -63,6 +65,8 @@
 		7266879126D3803400E68405 /* OpenWeatherMapOneCallAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapOneCallAPI.swift; sourceTree = "<group>"; };
 		7266879426D3971D00E68405 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		7266879726D3973F00E68405 /* WeatherType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherType.swift; sourceTree = "<group>"; };
+		726F24E4271D96EB0061478C /* Pictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pictures.swift; sourceTree = "<group>"; };
+		726F24E6271D978C0061478C /* UIImage + initWithPictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + initWithPictures.swift"; sourceTree = "<group>"; };
 		7273FD0F26D3A2CF00A7B32D /* OpenWeatherMapLinksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapLinksManager.swift; sourceTree = "<group>"; };
 		7273FD1B26D3C26700A7B32D /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		728EE4EA2719F99A00E56C71 /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = city.list.json; path = ../../../../../Downloads/city.list.json; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			children = (
 				728EE4F0271A025C00E56C71 /* UILabel+setAppStyle.swift */,
 				72DCDD9026D647A0001E17F7 /* UIView+fixInContainer.swift */,
+				726F24E6271D978C0061478C /* UIImage + initWithPictures.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				72F7B38426D3712800BD6168 /* AppDelegate.swift */,
 				72F7B38626D3712800BD6168 /* SceneDelegate.swift */,
 				728EE4EA2719F99A00E56C71 /* city.list.json */,
+				726F24E4271D96EB0061478C /* Pictures.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -396,6 +402,7 @@
 				72F7B38526D3712800BD6168 /* AppDelegate.swift in Sources */,
 				72DCDD9126D647A0001E17F7 /* UIView+fixInContainer.swift in Sources */,
 				72DA9A6D26DD11CA00ECC96A /* MainViewController+UITableViewDelegate.swift in Sources */,
+				726F24E5271D96EB0061478C /* Pictures.swift in Sources */,
 				7266878926D3786200E68405 /* NetworkManagerProtocol.swift in Sources */,
 				7253CA1926D3741A00409D7F /* City.swift in Sources */,
 				7266879226D3803400E68405 /* OpenWeatherMapOneCallAPI.swift in Sources */,
@@ -405,6 +412,7 @@
 				72C02DB426D67B5300C0498F /* HourlyWeatherViewCell.swift in Sources */,
 				72DA9A6926DCEEBF00ECC96A /* DailyWeatherTableViewCell.swift in Sources */,
 				7253CA1F26D374A200409D7F /* MainViewController.swift in Sources */,
+				726F24E7271D978C0061478C /* UIImage + initWithPictures.swift in Sources */,
 				72F7B38726D3712800BD6168 /* SceneDelegate.swift in Sources */,
 				7253CA1C26D3745100409D7F /* Coordinates.swift in Sources */,
 				7266879826D3973F00E68405 /* WeatherType.swift in Sources */,

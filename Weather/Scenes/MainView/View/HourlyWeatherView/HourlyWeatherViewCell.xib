@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAD-Tj-3Q0">
                         <rect key="frame" x="0.0" y="0.0" width="331" height="304"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-00-Rbu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-00-Rbu">
                                 <rect key="frame" x="5" y="5" width="321" height="43.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -29,7 +29,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMB-tA-VnB">
                                 <rect key="frame" x="5" y="58.5" width="321" height="152"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2S-Fh-3us">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2S-Fh-3us">
                                 <rect key="frame" x="5" y="215.5" width="321" height="83.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -67,6 +67,8 @@
                 <outlet property="temperatureLabel" destination="J2S-Fh-3us" id="pS4-sz-Zar"/>
                 <outlet property="timeLabel" destination="Fga-00-Rbu" id="p19-gA-kcR"/>
                 <outlet property="weatherImage" destination="bMB-tA-VnB" id="GbY-Y5-VAz"/>
+                <outletCollection property="viewLabels" destination="Fga-00-Rbu" collectionClass="NSMutableArray" id="WVt-no-z8R"/>
+                <outletCollection property="viewLabels" destination="J2S-Fh-3us" collectionClass="NSMutableArray" id="xTE-Ia-VgO"/>
             </connections>
             <point key="canvasLocation" x="148.55072463768118" y="169.41964285714286"/>
         </collectionViewCell>

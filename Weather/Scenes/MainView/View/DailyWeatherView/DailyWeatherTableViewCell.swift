@@ -21,6 +21,7 @@ class DailyWeatherTableViewCell: UITableViewCell {
     @IBOutlet weak var nightLabel: UILabel!
     @IBOutlet weak var eveLabel: UILabel!
     
+    @IBOutlet var viewLabels: [UILabel]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,16 +33,9 @@ class DailyWeatherTableViewCell: UITableViewCell {
     }
     
     private func setupFonts() {
-        dayTempLabel.setAppStyle()
-        eveTempLabel.setAppStyle()
-        nightTempLabel.setAppStyle()
-        morningTempLabel.setAppStyle()
-        dateLabel.setAppStyle()
-        morningLabel.setAppStyle()
-        dayLabel.setAppStyle()
-        eveLabel.setAppStyle()
-        nightLabel.setAppStyle()
-        
+        for label in viewLabels {
+            label.setAppStyle()
+        }
     }
     
 }

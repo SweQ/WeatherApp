@@ -14,6 +14,8 @@ class HourlyWeatherViewCell: UICollectionViewCell {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet var viewLabels: [UILabel]!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,8 +23,9 @@ class HourlyWeatherViewCell: UICollectionViewCell {
     }
     
     private func setupFonts() {
-        temperatureLabel.setAppStyle()
-        timeLabel.setAppStyle()
+        for label in viewLabels {
+            label.setAppStyle()
+        }
     }
 
 }

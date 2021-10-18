@@ -116,7 +116,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dWK-lq-wHY"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dWK-lq-wHY" firstAttribute="trailing" secondItem="0b7-eO-2Rb" secondAttribute="trailing" id="27x-Zi-s2F"/>
                             <constraint firstItem="cES-zq-dhb" firstAttribute="leading" secondItem="dWK-lq-wHY" secondAttribute="leading" id="5Xl-S8-AT7"/>
@@ -153,9 +153,6 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
