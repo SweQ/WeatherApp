@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
     
     internal var modelView = MainViewModel()
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var displayScrollView: UIScrollView!
     @IBOutlet weak var selectCityTableView: UITableView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -105,6 +106,8 @@ class MainViewController: UIViewController {
         selectCityTableView.delegate = self
         selectCityTableView.dataSource = self
         selectCityTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        selectCityTableView.layer.cornerRadius = 10
+        selectCityTableView.separatorColor = .white
         
         dailyWeatherTableView.delegate = self
         dailyWeatherTableView.dataSource = self

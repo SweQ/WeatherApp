@@ -79,6 +79,38 @@ class MainViewModel: MainViewModelProtocol {
     }
     
     private func updateWeatherData(from city: City) {
+        if let weather = loadWeatherDataFromCache(city: city) {
+            self.weatherData = weather
+        } else {
+            loadWeatherDataFromServer(city: city)
+        }
+    }
+    
+    private func loadWeatherDataFromCache(city: City) -> OpenWeatherMapOneCallAPI? {
+        guard let weatherDataFromCache = CoreDataManager.standart.loadWeather(cityId: "\(city.coord.lat)\(city.coord.lon)") else {
+            return nil
+        }
+        let dateDataInCache = weatherDataFromCache.weatherDate
+        let dateNow = Double(Date().timeIntervalSince1970)
+        
+        let minutesInterval = (dateNow - dateDataInCache) / 60
+        print("Minutes: \(minutesInterval)")
+        guard abs(minutesInterval) < 5 else {
+            CoreDataManager.standart.removeWeather(cacheWeather: weatherDataFromCache)
+            return nil
+        }
+        guard let weatherData = weatherDataFromCache.weatherData,
+              let weather = try? JSONDecoder().decode(
+                          OpenWeatherMapOneCallAPI.self,
+                          from: weatherData)
+            else {
+                return nil
+            }
+            print("LOAD FROM BASE ")
+            return weather
+    }
+    
+    private func loadWeatherDataFromServer(city: City) {
         guard let url = OpenWeatherMapLinksManager.shared.getOneCallAPI(with: city) else { return }
         NetworkManager.shared.makeRequest(with: url) { [unowned self] data in
             guard let weather = try? JSONDecoder().decode(
@@ -89,10 +121,10 @@ class MainViewModel: MainViewModelProtocol {
                 return
             }
             weatherData = weather
+            print("Load from Web")
+            CoreDataManager.standart.addToBase(cityId: "\(city.coord.lat)\(city.coord.lon)", date: weather.current.dt, weather: data!)
         }
     }
-    
-    
     
     private func updateCurrentCity(with coordinates: Coordinates) {
         guard let url = OpenWeatherMapLinksManager.shared.getCitiesAPI(with: coordinates) else { return }

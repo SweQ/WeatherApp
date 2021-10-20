@@ -56,7 +56,7 @@
                                                         </cells>
                                                     </collectionView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.9248580065730474" green="1" blue="0.94130593728924483" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.65287051009581987" green="0.91296894710088516" blue="0.80142988878129362" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="W1X-bx-Avw" firstAttribute="leading" secondItem="Izh-9E-5Av" secondAttribute="leading" id="EkT-GM-AUe"/>
                                                     <constraint firstItem="gsa-kb-Hdr" firstAttribute="top" secondItem="W1X-bx-Avw" secondAttribute="bottom" constant="10" id="TnU-F3-5ld"/>
@@ -133,6 +133,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
+                        <outlet property="backgroundView" destination="Izh-9E-5Av" id="AHu-cv-tI4"/>
                         <outlet property="currentWeatherView" destination="W1X-bx-Avw" id="ROD-WB-TfB"/>
                         <outlet property="dailyWeatherTableView" destination="0AJ-uH-rN2" id="Ame-bt-DrK"/>
                         <outlet property="displayScrollView" destination="0b7-eO-2Rb" id="M9D-b9-Hu7"/>

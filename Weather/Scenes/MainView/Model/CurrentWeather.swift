@@ -9,7 +9,7 @@ import Foundation
 
 struct CurrentWeather: Codable {
     
-    private let dt: Double
+    let dt: Double
     var date: String {
         get {
             let dateFormatter = DateFormatter()
