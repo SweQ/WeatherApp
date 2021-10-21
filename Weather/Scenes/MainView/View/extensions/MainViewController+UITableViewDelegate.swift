@@ -38,12 +38,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.dayTempLabel.text = dailyWeather.temp.temperatureDay
         cell.eveTempLabel.text = dailyWeather.temp.temperatureEve
         cell.nightTempLabel.text = dailyWeather.temp.temperatureNight
-        if let urlImage = OpenWeatherMapLinksManager.shared.getImageAPI(with: dailyWeather.weather.first!.icon) {
-            NetworkManager.shared.makeRequest(with: urlImage) { (data) in
-                guard let data = data else { return }
-                DispatchQueue.main.async {
-                    cell.weatherImageView.image = UIImage(data: data)
-                }
+        DispatchQueue.global().async { [weak self] in
+            self?.modelView.loadImage(name: dailyWeather.weather[0].icon) { image in
+                cell.weatherImageView.image = image
             }
         }
         return cell

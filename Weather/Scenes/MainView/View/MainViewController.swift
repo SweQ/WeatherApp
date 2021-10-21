@@ -127,12 +127,9 @@ class MainViewController: UIViewController {
                 self.currentWeatherView.humidityInfoView.descriptionLabel.text = currentWeather.humidityInfo
                 self.currentWeatherView.pressureInfoView.descriptionLabel.text = currentWeather.pressureInfo
                 self.currentWeatherView.windInfoView.descriptionLabel.text = currentWeather.windSpeed
-                if let urlImage = OpenWeatherMapLinksManager.shared.getImageAPI(with: currentWeather.weather.first!.icon) {
-                    NetworkManager.shared.makeRequest(with: urlImage) { [unowned self] (data) in
-                        guard let data = data else { return }
-                        DispatchQueue.main.async {
-                            self.currentWeatherView.weatherImage.image = UIImage(data: data)
-                        }
+                DispatchQueue.global(qos: .userInitiated).async {
+                    modelView.loadImage(name: currentWeather.weather[0].icon) { image in
+                        self.currentWeatherView.weatherImage.image = image
                     }
                 }
             }

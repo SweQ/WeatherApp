@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct WeatherType: Codable {
     var icon: String

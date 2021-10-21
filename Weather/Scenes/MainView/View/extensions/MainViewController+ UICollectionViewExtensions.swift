@@ -22,12 +22,9 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         cell.timeLabel.text = hourlyWeather.time
         cell.temperatureLabel.text = hourlyWeather.temperature
-        if let urlImage = OpenWeatherMapLinksManager.shared.getImageAPI(with: hourlyWeather.weather.first!.icon) {
-            NetworkManager.shared.makeRequest(with: urlImage) { (data) in
-                guard let data = data else { return }
-                DispatchQueue.main.async {
-                    cell.weatherImage.image = UIImage(data: data)
-                }
+        DispatchQueue.global().async { [weak self] in
+            self?.modelView.loadImage(name: hourlyWeather.weather[0].icon) { image in
+                cell.weatherImage.image = image
             }
         }
         

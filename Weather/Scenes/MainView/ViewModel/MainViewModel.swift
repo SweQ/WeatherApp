@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MainViewModel: MainViewModelProtocol {
     
@@ -96,7 +97,7 @@ class MainViewModel: MainViewModelProtocol {
         let minutesInterval = (dateNow - dateDataInCache) / 60
         print("Minutes: \(minutesInterval)")
         guard abs(minutesInterval) < 5 else {
-            CoreDataManager.standart.removeWeather(cacheWeather: weatherDataFromCache)
+            CoreDataManager.standart.removeObjectFromCache(object: weatherDataFromCache)
             return nil
         }
         guard let weatherData = weatherDataFromCache.weatherData,
@@ -122,7 +123,7 @@ class MainViewModel: MainViewModelProtocol {
             }
             weatherData = weather
             print("Load from Web")
-            CoreDataManager.standart.addToBase(cityId: "\(city.coord.lat)\(city.coord.lon)", date: weather.current.dt, weather: data!)
+            CoreDataManager.standart.addWeatherToCache(cityId: "\(city.coord.lat)\(city.coord.lon)", date: weather.current.dt, weather: data!)
         }
     }
     
@@ -152,6 +153,24 @@ class MainViewModel: MainViewModelProtocol {
         let clManager = LocationManager.shared
         clManager.updatingLocation { [unowned self] currentCoordinates in
             self.updateCurrentCity(with: currentCoordinates)
+        }
+    }
+    
+    func loadImage(name: String, completion: @escaping (UIImage)->()) {
+        if let image = CoreDataManager.standart.loadImageFromCache(name: name) {
+            DispatchQueue.main.async {
+                completion(image)
+            }
+        }
+        else if let urlImage = OpenWeatherMapLinksManager.shared.getImageAPI(with: name) {
+            NetworkManager.shared.makeRequest(with: urlImage) { (data) in
+                guard let data = data else { return }
+                guard let image = UIImage(data: data) else { return }
+                CoreDataManager.standart.addImageToCache(name: name, image: image)
+                DispatchQueue.main.async {
+                    completion(image)
+                }
+            }
         }
     }
     

@@ -2,7 +2,7 @@
 //  CacheWeathers+CoreDataProperties.swift
 //  Weather
 //
-//  Created by alexKoro on 20.10.21.
+//  Created by alexKoro on 21.10.21.
 //
 //
 
